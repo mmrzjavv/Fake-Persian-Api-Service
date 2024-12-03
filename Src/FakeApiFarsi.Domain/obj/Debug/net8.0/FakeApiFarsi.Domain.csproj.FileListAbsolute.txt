@@ -1,0 +1,11 @@
+D:\work\Self\FakeApiFarsi\BackEnd\FakeApiFarsi_WebService\Src\FakeApiFarsi.Domain\bin\Debug\net8.0\FakeApiFarsi.Domain.deps.json
+D:\work\Self\FakeApiFarsi\BackEnd\FakeApiFarsi_WebService\Src\FakeApiFarsi.Domain\bin\Debug\net8.0\FakeApiFarsi.Domain.dll
+D:\work\Self\FakeApiFarsi\BackEnd\FakeApiFarsi_WebService\Src\FakeApiFarsi.Domain\bin\Debug\net8.0\FakeApiFarsi.Domain.pdb
+D:\work\Self\FakeApiFarsi\BackEnd\FakeApiFarsi_WebService\Src\FakeApiFarsi.Domain\obj\Debug\net8.0\FakeApiFarsi.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\work\Self\FakeApiFarsi\BackEnd\FakeApiFarsi_WebService\Src\FakeApiFarsi.Domain\obj\Debug\net8.0\FakeApiFarsi.Domain.AssemblyInfoInputs.cache
+D:\work\Self\FakeApiFarsi\BackEnd\FakeApiFarsi_WebService\Src\FakeApiFarsi.Domain\obj\Debug\net8.0\FakeApiFarsi.Domain.AssemblyInfo.cs
+D:\work\Self\FakeApiFarsi\BackEnd\FakeApiFarsi_WebService\Src\FakeApiFarsi.Domain\obj\Debug\net8.0\FakeApiFarsi.Domain.csproj.CoreCompileInputs.cache
+D:\work\Self\FakeApiFarsi\BackEnd\FakeApiFarsi_WebService\Src\FakeApiFarsi.Domain\obj\Debug\net8.0\FakeApiFarsi.Domain.dll
+D:\work\Self\FakeApiFarsi\BackEnd\FakeApiFarsi_WebService\Src\FakeApiFarsi.Domain\obj\Debug\net8.0\refint\FakeApiFarsi.Domain.dll
+D:\work\Self\FakeApiFarsi\BackEnd\FakeApiFarsi_WebService\Src\FakeApiFarsi.Domain\obj\Debug\net8.0\FakeApiFarsi.Domain.pdb
+D:\work\Self\FakeApiFarsi\BackEnd\FakeApiFarsi_WebService\Src\FakeApiFarsi.Domain\obj\Debug\net8.0\ref\FakeApiFarsi.Domain.dll

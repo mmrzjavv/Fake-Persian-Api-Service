@@ -1,0 +1,15 @@
+D:\work\Self\FakeApiFarsi\BackEnd\FakeApiFarsi_WebService\Src\FakeApiFarsi.infrastructure\bin\Debug\net8.0\FakeApiFarsi.infrastructure.deps.json
+D:\work\Self\FakeApiFarsi\BackEnd\FakeApiFarsi_WebService\Src\FakeApiFarsi.infrastructure\bin\Debug\net8.0\FakeApiFarsi.infrastructure.dll
+D:\work\Self\FakeApiFarsi\BackEnd\FakeApiFarsi_WebService\Src\FakeApiFarsi.infrastructure\bin\Debug\net8.0\FakeApiFarsi.infrastructure.pdb
+D:\work\Self\FakeApiFarsi\BackEnd\FakeApiFarsi_WebService\Src\FakeApiFarsi.infrastructure\bin\Debug\net8.0\FakeApiFarsi.Domain.dll
+D:\work\Self\FakeApiFarsi\BackEnd\FakeApiFarsi_WebService\Src\FakeApiFarsi.infrastructure\bin\Debug\net8.0\FakeApiFarsi.Domain.pdb
+D:\work\Self\FakeApiFarsi\BackEnd\FakeApiFarsi_WebService\Src\FakeApiFarsi.infrastructure\obj\Debug\net8.0\FakeApiFarsi.infrastructure.csproj.AssemblyReference.cache
+D:\work\Self\FakeApiFarsi\BackEnd\FakeApiFarsi_WebService\Src\FakeApiFarsi.infrastructure\obj\Debug\net8.0\FakeApiFarsi.infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\work\Self\FakeApiFarsi\BackEnd\FakeApiFarsi_WebService\Src\FakeApiFarsi.infrastructure\obj\Debug\net8.0\FakeApiFarsi.infrastructure.AssemblyInfoInputs.cache
+D:\work\Self\FakeApiFarsi\BackEnd\FakeApiFarsi_WebService\Src\FakeApiFarsi.infrastructure\obj\Debug\net8.0\FakeApiFarsi.infrastructure.AssemblyInfo.cs
+D:\work\Self\FakeApiFarsi\BackEnd\FakeApiFarsi_WebService\Src\FakeApiFarsi.infrastructure\obj\Debug\net8.0\FakeApiFarsi.infrastructure.csproj.CoreCompileInputs.cache
+D:\work\Self\FakeApiFarsi\BackEnd\FakeApiFarsi_WebService\Src\FakeApiFarsi.infrastructure\obj\Debug\net8.0\FakeApiF.76448EAB.Up2Date
+D:\work\Self\FakeApiFarsi\BackEnd\FakeApiFarsi_WebService\Src\FakeApiFarsi.infrastructure\obj\Debug\net8.0\FakeApiFarsi.infrastructure.dll
+D:\work\Self\FakeApiFarsi\BackEnd\FakeApiFarsi_WebService\Src\FakeApiFarsi.infrastructure\obj\Debug\net8.0\refint\FakeApiFarsi.infrastructure.dll
+D:\work\Self\FakeApiFarsi\BackEnd\FakeApiFarsi_WebService\Src\FakeApiFarsi.infrastructure\obj\Debug\net8.0\FakeApiFarsi.infrastructure.pdb
+D:\work\Self\FakeApiFarsi\BackEnd\FakeApiFarsi_WebService\Src\FakeApiFarsi.infrastructure\obj\Debug\net8.0\ref\FakeApiFarsi.infrastructure.dll

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "5K0hBF62PNw=",
+  "success": true,
+  "projectFilePath": "D:\\work\\Self\\FakeApiFarsi\\BackEnd\\FakeApiFarsi_WebService\\Src\\FakeApiFarsi.infrastructure\\FakeApiFarsi.infrastructure.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\AsusIran\\.nuget\\packages\\bogus\\35.6.1\\bogus.35.6.1.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\FakeApiFarsi.Api.props" />
+</Project>
