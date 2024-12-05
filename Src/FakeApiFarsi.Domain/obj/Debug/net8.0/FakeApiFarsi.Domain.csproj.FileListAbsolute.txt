@@ -9,3 +9,4 @@ D:\work\Self\FakeApiFarsi\BackEnd\FakeApiFarsi_WebService\Src\FakeApiFarsi.Domai
 D:\work\Self\FakeApiFarsi\BackEnd\FakeApiFarsi_WebService\Src\FakeApiFarsi.Domain\obj\Debug\net8.0\refint\FakeApiFarsi.Domain.dll
 D:\work\Self\FakeApiFarsi\BackEnd\FakeApiFarsi_WebService\Src\FakeApiFarsi.Domain\obj\Debug\net8.0\FakeApiFarsi.Domain.pdb
 D:\work\Self\FakeApiFarsi\BackEnd\FakeApiFarsi_WebService\Src\FakeApiFarsi.Domain\obj\Debug\net8.0\ref\FakeApiFarsi.Domain.dll
+D:\work\Self\FakeApiFarsi\BackEnd\FakeApiFarsi_WebService\Src\FakeApiFarsi.Domain\obj\Debug\net8.0\FakeApiFarsi.Domain.sourcelink.json

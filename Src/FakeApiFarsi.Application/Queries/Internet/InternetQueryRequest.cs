@@ -6,16 +6,16 @@ namespace FakeApiFarsi.Application.Queries.Internet;
 
 public class InternetQueryRequest
 {
-    public class InternetQueryCommand : IRequest<OperationResult<Domain.Internet.Internet>>
+    public class InternetQuery : IRequest<OperationResult<Domain.Internet.Internet>>
     {
         public int Skip { get; set; }
         public int Take { get; set; }
     }
 
     public class InternetQueryHandler(IFakeDataRepository<Domain.Internet.Internet> internetRepository)
-        : IRequestHandler<InternetQueryCommand, OperationResult<Domain.Internet.Internet>>
+        : IRequestHandler<InternetQuery, OperationResult<Domain.Internet.Internet>>
     {
-        public async Task<OperationResult<Domain.Internet.Internet>> Handle(InternetQueryCommand request,
+        public async Task<OperationResult<Domain.Internet.Internet>> Handle(InternetQuery request,
             CancellationToken cancellationToken)
         {
             OperationResult<Domain.Internet.Internet> op = new("GetInternets");

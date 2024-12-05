@@ -1,6 +1,9 @@
 ﻿using Carter;
 using FakeApiFarsi.Application.Queries.Todo;
+using FakeApiFarsi.Domain.Todo;
+using FakeApiFarsi.infrastructure.OperationRseult;
 using MediatR;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FakeApiFarsi.Api.EndPoints;
@@ -11,65 +14,45 @@ public class TodoEndpoints : ICarterModule
     {
         var todos = app.MapGroup("api/v1/todos").WithTags("Todos");
 
-        // todos.MapPost("/", AddTodoAsync);
-        // todos.MapPut("/{id}", UpdateTodoAsync);
-        // todos.MapDelete("/{id}", DeleteTodoAsync);
-        // todos.MapGet("/{id}", GetTodoByIdAsync);
-        todos.MapGet("/", GetTodosAsync);
+        todos.MapGet("/", GetTodosAsync).AllowAnonymous();
+        todos.MapPost("/", AddTodoAsync).AllowAnonymous();  
+        todos.MapPut("/{id}", UpdateTodoAsync).AllowAnonymous();
+        todos.MapDelete("/{id}", DeleteTodoAsync).AllowAnonymous();
     }
 
     // Create (POST)
-    // async Task<IResult> AddTodoAsync(
-    //     [FromBody] TodoDto todoDto,
-    //     [FromServices] IToDoManager todoManager
-    // )
-    // {
-    //     var result = await todoManager.AddTodoAsync(todoDto);
-    //     return result.IsSuccess ? Results.Created($"/todos/{result.Value.Id}", result.Value) 
-    //                             : Results.BadRequest(result.Error);
-    // }
+    Task<IResult> AddTodoAsync([FromBody] Todo todo)
+    {
+        OperationResult<bool> op = new("Create");
+        return Task.FromResult(Results.Ok(op.Succeed("اطلاعات با موفقیت ثبت شد", true)));
+    }
 
     // Update (PUT)
-    // async Task<IResult> UpdateTodoAsync(
-    //     [FromRoute] int id,
-    //     [FromBody] TodoDto todoDto,
-    //     [FromServices] IToDoManager todoManager
-    // )
-    // {
-    //     var result = await todoManager.UpdateTodoAsync(id, todoDto);
-    //     return result.IsSuccess ? Results.Ok(result.Value) 
-    //                             : Results.BadRequest(result.Error);
-    // }
+    Task<IResult> UpdateTodoAsync(
+        [FromRoute] int id
+    )
+    {
+        OperationResult<bool> op = new("Update");
+        return Task.FromResult(Results.Ok(op.Succeed("اطلاعات با موفقیت به‌روزرسانی شد", true)));
+    }
 
-    // Delete
-    // async Task<IResult> DeleteTodoAsync(
-    //     [FromRoute] int id,
-    //     [FromServices] IToDoManager todoManager
-    // )
-    // {
-    //     var result = await todoManager.DeleteTodoAsync(id);
-    //     return result.IsSuccess ? Results.Ok() : Results.BadRequest(result.Error);
-    // }
+    // Delete (DELETE)
+    Task<IResult> DeleteTodoAsync(
+        [FromRoute] int id
+    )
+    {
+        OperationResult<bool> op = new("Delete");
+        return Task.FromResult(Results.Ok(op.Succeed("اطلاعات با موفقیت حذف شد", true)));
+    }
 
-    // Get By ID
-    // async Task<IResult> GetTodoByIdAsync(
-    //     [FromRoute] int id,
-    //     [FromServices] IToDoManager todoManager
-    // )
-    // {
-    //     var result = await todoManager.GetTodoByIdAsync(id);
-    //     return result.IsSuccess ? Results.Ok(result.Value) 
-    //                             : Results.NotFound(result.Error);
-    // }
-
-    // Filter (Pagination)
+ 
     async Task<IResult> GetTodosAsync(
         [FromQuery] int skip,
         [FromQuery] int take,
         [FromServices] IMediator mediator,
         HttpResponse response)
     {
-        var request = new TodoQueryHandler.TodoCommandRequest
+        var request = new TodoQueryRequest.TodoQuery()
         {
             Skip = skip,
             Take = take

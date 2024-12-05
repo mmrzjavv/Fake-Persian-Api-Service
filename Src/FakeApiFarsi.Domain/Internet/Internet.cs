@@ -2,6 +2,7 @@
 {
     public class Internet
     {
+        public int  Id { get; set; }
         public required string Email { get; set; }
         public required string UserName { get; set; }
         public required string Url { get; set; }

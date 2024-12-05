@@ -1,40 +1,40 @@
-using FakeApiFarsi.Application.Queries.Todo;
-using FakeApiFarsi.Domain.Todo;
-using MediatR;
+using Asp.Versioning.ApiExplorer;
 using Carter;
-using FakeApiFarsi.Domain;
-using FakeApiFarsi.Domain.Internet;
-using FakeApiFarsi.Infrastructure.Internet;
-using FakeApiFarsi.infrastructure.Todo;
+using FakeApiFarsi.Api;
+using FakeApiFarsi.Api.Middlewares;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
-builder.Services.AddCarter();  
-builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<TodoQueryHandler.TodoCommandRequest>());
-builder.Services.AddScoped<IFakeDataRepository<Todo>, TodoFakeDataRepository>();
-builder.Services.AddScoped<IFakeDataRepository<Internet>, InternetFakeDataRepository>();
-
-
-builder.Services.AddAuthorization();  
-
+builder.AddPackagesServices();
+builder.AddFakeApiFarsiServices();
+builder.AddTokenConfig();
+builder.Host.UseSerilog(LoggingConfiguration.ConfigureLogger);
+builder.AddVersioningConfig();
+builder.AddCorsConfig();
+builder.Services.AddAuthorization();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-
-if (app.Environment.IsDevelopment())
+app.UseSwagger();
+app.UseSwaggerUI(c => 
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+    var provider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
+    foreach (var description in provider.ApiVersionDescriptions)
+    {
+        c.SwaggerEndpoint($"/swagger/{description.GroupName}/swagger.json", description.GroupName.ToUpperInvariant());
+    }
+});
 
+app.UseMiddleware<ExceptionHandelingMiddleware>();
+app.UseMiddleware<LimitMiddleware>();
+// app.UseMiddleware<JwtValidationMiddleware>();
+app.UseCors("CorsPolicy");
 app.UseHttpsRedirection();
-
-app.UseAuthorization();  
-
+app.UseAuthentication();
+app.UseAuthorization();
 app.MapCarter();
-
 app.Run();

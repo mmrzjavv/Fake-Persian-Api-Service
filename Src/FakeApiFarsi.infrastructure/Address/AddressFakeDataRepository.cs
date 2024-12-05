@@ -11,11 +11,12 @@ namespace FakeApiFarsi.Infrastructure.Address
         public AddressFakeDataRepository()
         {
             _addressFaker = new Faker<Domain.Address.Address>("fa")
-                .RuleFor(address => address.StreetAddress, f => f.Address.StreetAddress())  // خیابان
-                .RuleFor(address => address.City, f => f.Address.City())  // شهر
-                .RuleFor(address => address.State, f => f.Address.State())  // استان
-                .RuleFor(address => address.Country, f => f.Address.Country())  // کشور
-                .RuleFor(address => address.ZipCode, f => f.Address.ZipCode());  // کد پستی
+                .RuleFor(address => address.Id, f => f.IndexFaker + 1)
+                .RuleFor(address => address.StreetAddress, f => f.Address.StreetAddress())  
+                .RuleFor(address => address.City, f => f.Address.City())  
+                .RuleFor(address => address.State, f => f.Address.State())  
+                .RuleFor(address => address.Country, f => f.Address.Country())  
+                .RuleFor(address => address.ZipCode, f => f.Address.ZipCode());  
         }
 
         public async Task<List<Domain.Address.Address>> GenerateFakeDataAsync(int skip, int take)

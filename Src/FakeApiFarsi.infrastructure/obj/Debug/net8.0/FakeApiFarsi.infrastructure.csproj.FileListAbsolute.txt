@@ -13,3 +13,4 @@ D:\work\Self\FakeApiFarsi\BackEnd\FakeApiFarsi_WebService\Src\FakeApiFarsi.infra
 D:\work\Self\FakeApiFarsi\BackEnd\FakeApiFarsi_WebService\Src\FakeApiFarsi.infrastructure\obj\Debug\net8.0\refint\FakeApiFarsi.infrastructure.dll
 D:\work\Self\FakeApiFarsi\BackEnd\FakeApiFarsi_WebService\Src\FakeApiFarsi.infrastructure\obj\Debug\net8.0\FakeApiFarsi.infrastructure.pdb
 D:\work\Self\FakeApiFarsi\BackEnd\FakeApiFarsi_WebService\Src\FakeApiFarsi.infrastructure\obj\Debug\net8.0\ref\FakeApiFarsi.infrastructure.dll
+D:\work\Self\FakeApiFarsi\BackEnd\FakeApiFarsi_WebService\Src\FakeApiFarsi.infrastructure\obj\Debug\net8.0\FakeApiFarsi.infrastructure.sourcelink.json

@@ -4,18 +4,18 @@ using MediatR;
 
 namespace FakeApiFarsi.Application.Queries.Todo;
 
-public abstract class TodoQueryHandler
+public abstract class TodoQueryRequest
 {
-    public class TodoCommandRequest : IRequest<OperationResult<Domain.Todo.Todo>>
+    public class TodoQuery : IRequest<OperationResult<Domain.Todo.Todo>>
     {
         public int Skip { get; set; }
         public int Take { get; set; }
     }
 
-    public class TodoCommandHandler(IFakeDataRepository<Domain.Todo.Todo> todoRepository)
-        : IRequestHandler<TodoCommandRequest, OperationResult<Domain.Todo.Todo>>
+    public class TodoQueryHandler(IFakeDataRepository<Domain.Todo.Todo> todoRepository)
+        : IRequestHandler<TodoQuery, OperationResult<Domain.Todo.Todo>>
     {
-        public async Task<OperationResult<Domain.Todo.Todo>> Handle(TodoCommandRequest request,
+        public async Task<OperationResult<Domain.Todo.Todo>> Handle(TodoQuery request,
             CancellationToken cancellationToken)
         {
             OperationResult<Domain.Todo.Todo> op = new("Todo");
