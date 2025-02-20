@@ -30,6 +30,15 @@ app.MapScalarApiReference(opt =>
     opt.Theme = ScalarTheme.Mars;
     opt.DefaultHttpClient = new(ScalarTarget.Http, ScalarClient.Http11);
 });
+app.UseSwagger();
+app.UseSwaggerUI(c => 
+{
+    var provider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
+    foreach (var description in provider.ApiVersionDescriptions)
+    {
+        c.SwaggerEndpoint($"/swagger/{description.GroupName}/swagger.json", description.GroupName.ToUpperInvariant());
+    }
+});
 
 app.UseMiddleware<ExceptionHandelingMiddleware>();
 app.UseMiddleware<LimitMiddleware>();
