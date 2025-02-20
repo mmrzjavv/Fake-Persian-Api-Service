@@ -47,15 +47,15 @@ public class TodoEndpoints : ICarterModule
 
  
     async Task<IResult> GetTodosAsync(
-        [FromQuery] int skip,
-        [FromQuery] int take,
+        [FromQuery] int? skip,
+        [FromQuery] int? take,
         [FromServices] IMediator mediator,
         HttpResponse response)
     {
         var request = new TodoQueryRequest.TodoQuery()
         {
-            Skip = skip,
-            Take = take
+            Skip = skip??0,
+            Take = take??10
         };
 
         var result = await mediator.Send(request);

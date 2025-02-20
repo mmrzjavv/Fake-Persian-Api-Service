@@ -12,14 +12,14 @@ namespace FakeApiFarsi.Infrastructure.Address
         {
             _addressFaker = new Faker<Domain.Address.Address>("fa")
                 .RuleFor(address => address.Id, f => f.IndexFaker + 1)
-                .RuleFor(address => address.StreetAddress, f => f.Address.StreetAddress())  
-                .RuleFor(address => address.City, f => f.Address.City())  
-                .RuleFor(address => address.State, f => f.Address.State())  
-                .RuleFor(address => address.Country, f => f.Address.Country())  
-                .RuleFor(address => address.ZipCode, f => f.Address.ZipCode());  
+                .RuleFor(address => address.StreetAddress, f => f.Address.StreetAddress())
+                .RuleFor(address => address.City, f => f.Address.City())
+                .RuleFor(address => address.State, f => f.Address.State())
+                .RuleFor(address => address.Country, f => f.Address.Country())
+                .RuleFor(address => address.ZipCode, f => f.Address.ZipCode());
         }
 
-        public async Task<List<Domain.Address.Address>> GenerateFakeDataAsync(int skip, int take)
+        public async Task<List<Domain.Address.Address>> GenerateFakeDataAsync(int skip = 0, int take = 10)
         {
             await Task.Yield();
             return _addressFaker.Generate(skip + take)

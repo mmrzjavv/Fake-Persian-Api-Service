@@ -1,4 +1,5 @@
-﻿using FakeApiFarsi.Domain;
+﻿using FakeApiFarsi.Application.Queries.DTOs;
+using FakeApiFarsi.Domain;
 using FakeApiFarsi.infrastructure.OperationRseult;
 using MediatR;
 
@@ -6,10 +7,9 @@ namespace FakeApiFarsi.Application.Queries.Address;
 
 public class AddressQueryRequest
 {
-    public class AddressQuery : IRequest<OperationResult<Domain.Address.Address>>
+    public class AddressQuery : BaseGetDto, IRequest<OperationResult<Domain.Address.Address>>
     {
-        public int Skip { get; set; }
-        public int Take { get; set; }
+    
     }
 
     public class AddressQueryHandler(IFakeDataRepository<Domain.Address.Address> addressRepository)

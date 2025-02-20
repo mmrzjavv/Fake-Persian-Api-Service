@@ -50,15 +50,15 @@ public class UserEndPoints : ICarterModule
 
     // Read (GET)
     async Task<IResult> GetUsersAsync(
-        [FromQuery] int skip,
-        [FromQuery] int take,
+        [FromQuery] int? skip,
+        [FromQuery] int? take,
         [FromServices] IMediator mediator,
         HttpResponse response)
     {
         var request = new UserQueryRequest.UserQuery()
         {
-            Skip = skip,
-            Take = take
+            Skip = skip??0,
+            Take = take??10
         };
 
         var result = await mediator.Send(request);

@@ -1,4 +1,5 @@
-﻿using FakeApiFarsi.Domain;
+﻿using FakeApiFarsi.Application.Queries.DTOs;
+using FakeApiFarsi.Domain;
 using FakeApiFarsi.infrastructure.OperationRseult;
 using MediatR;
 
@@ -6,10 +7,9 @@ namespace FakeApiFarsi.Application.Queries.Todo;
 
 public abstract class TodoQueryRequest
 {
-    public class TodoQuery : IRequest<OperationResult<Domain.Todo.Todo>>
+    public class TodoQuery : BaseGetDto,IRequest<OperationResult<Domain.Todo.Todo>>
     {
-        public int Skip { get; set; }
-        public int Take { get; set; }
+       
     }
 
     public class TodoQueryHandler(IFakeDataRepository<Domain.Todo.Todo> todoRepository)

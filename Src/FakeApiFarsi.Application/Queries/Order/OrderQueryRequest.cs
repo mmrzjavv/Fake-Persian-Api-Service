@@ -1,4 +1,5 @@
-﻿using FakeApiFarsi.Domain;
+﻿using FakeApiFarsi.Application.Queries.DTOs;
+using FakeApiFarsi.Domain;
 using FakeApiFarsi.infrastructure.OperationRseult;
 using MediatR;
 
@@ -6,10 +7,9 @@ namespace FakeApiFarsi.Application.Queries.Order;
 
 public class OrderQueryRequest
 {
-    public class OrderQuery : IRequest<OperationResult<Domain.Order.Order>>
+    public class OrderQuery :BaseGetDto, IRequest<OperationResult<Domain.Order.Order>>
     {
-        public int Skip { get; set; }
-        public int Take { get; set; }
+      
     }
     public class OrderQueryHandler(IFakeDataRepository<Domain.Order.Order> orderRepository) : IRequestHandler<OrderQuery , OperationResult<Domain.Order.Order>>
     {

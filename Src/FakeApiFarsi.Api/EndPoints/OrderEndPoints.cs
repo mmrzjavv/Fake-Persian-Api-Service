@@ -46,15 +46,15 @@ public class OrderEndPoints : ICarterModule
 
     // Read (GET)
     async Task<IResult> GetOrdersAsync(
-        [FromQuery] int skip,
-        [FromQuery] int take,
+        [FromQuery] int? skip,
+        [FromQuery] int? take,
         [FromServices] IMediator mediator,
         HttpResponse response)
     {
         var request = new OrderQueryRequest.OrderQuery()
         {
-            Skip = skip,
-            Take = take
+            Skip = skip??0,
+            Take = take??10
         };
 
         var result = await mediator.Send(request);

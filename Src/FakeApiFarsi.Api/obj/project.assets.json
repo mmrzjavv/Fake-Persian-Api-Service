@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {
+    "net9.0": {
       "Asp.Versioning.Abstractions/8.1.0": {
         "type": "package",
         "dependencies": {
@@ -684,15 +684,31 @@
           }
         }
       },
-      "Serilog/4.0.0": {
+      "Scalar.AspNetCore/2.0.15": {
         "type": "package",
         "compile": {
-          "lib/net8.0/Serilog.dll": {
+          "lib/net9.0/Scalar.AspNetCore.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/Serilog.dll": {
+          "lib/net9.0/Scalar.AspNetCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Serilog/4.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/Serilog.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Serilog.dll": {
             "related": ".xml"
           }
         }
@@ -919,19 +935,36 @@
           }
         }
       },
-      "Serilog.Sinks.File/5.0.0": {
+      "Serilog.Sinks.File/6.0.0": {
         "type": "package",
         "dependencies": {
-          "Serilog": "2.10.0"
+          "Serilog": "4.0.0"
         },
         "compile": {
-          "lib/net5.0/Serilog.Sinks.File.dll": {
-            "related": ".pdb;.xml"
+          "lib/net8.0/Serilog.Sinks.File.dll": {
+            "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net5.0/Serilog.Sinks.File.dll": {
-            "related": ".pdb;.xml"
+          "lib/net8.0/Serilog.Sinks.File.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Serilog.Sinks.Seq/9.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Serilog": "4.2.0",
+          "Serilog.Sinks.File": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Serilog.Sinks.Seq.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Serilog.Sinks.Seq.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -2300,10 +2333,27 @@
         "nswag.core.nuspec"
       ]
     },
-    "Serilog/4.0.0": {
-      "sha512": "2jDkUrSh5EofOp7Lx5Zgy0EB+7hXjjxE2ktTb1WVQmU00lDACR2TdROGKU0K1pDTBSJBN1PqgYpgOZF8mL7NJw==",
+    "Scalar.AspNetCore/2.0.15": {
+      "sha512": "0asKAhtw+rowRBw961+tpf3GKvMBv/ihitAKsr2skDawP8FGiOqtiM8V8hMwkUd5+qc4jIz6ggN+olIyO4y6nw==",
       "type": "package",
-      "path": "serilog/4.0.0",
+      "path": "scalar.aspnetcore/2.0.15",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/net8.0/Scalar.AspNetCore.dll",
+        "lib/net8.0/Scalar.AspNetCore.xml",
+        "lib/net9.0/Scalar.AspNetCore.dll",
+        "lib/net9.0/Scalar.AspNetCore.xml",
+        "scalar.aspnetcore.2.0.15.nupkg.sha512",
+        "scalar.aspnetcore.nuspec"
+      ]
+    },
+    "Serilog/4.2.0": {
+      "sha512": "gmoWVOvKgbME8TYR+gwMf7osROiWAURterc6Rt2dQyX7wtjZYpqFiA/pY6ztjGQKKV62GGCyOcmtP1UKMHgSmA==",
+      "type": "package",
+      "path": "serilog/4.2.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2317,9 +2367,11 @@
         "lib/net6.0/Serilog.xml",
         "lib/net8.0/Serilog.dll",
         "lib/net8.0/Serilog.xml",
+        "lib/net9.0/Serilog.dll",
+        "lib/net9.0/Serilog.xml",
         "lib/netstandard2.0/Serilog.dll",
         "lib/netstandard2.0/Serilog.xml",
-        "serilog.4.0.0.nupkg.sha512",
+        "serilog.4.2.0.nupkg.sha512",
         "serilog.nuspec"
       ]
     },
@@ -2612,31 +2664,44 @@
         "serilog.sinks.debug.nuspec"
       ]
     },
-    "Serilog.Sinks.File/5.0.0": {
-      "sha512": "uwV5hdhWPwUH1szhO8PJpFiahqXmzPzJT/sOijH/kFgUx+cyoDTMM8MHD0adw9+Iem6itoibbUXHYslzXsLEAg==",
+    "Serilog.Sinks.File/6.0.0": {
+      "sha512": "lxjg89Y8gJMmFxVkbZ+qDgjl+T4yC5F7WSLTvA+5q0R04tfKVLRL/EHpYoJ/MEQd2EeCKDuylBIVnAYMotmh2A==",
       "type": "package",
-      "path": "serilog.sinks.file/5.0.0",
+      "path": "serilog.sinks.file/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "images/icon.png",
-        "lib/net45/Serilog.Sinks.File.dll",
-        "lib/net45/Serilog.Sinks.File.pdb",
-        "lib/net45/Serilog.Sinks.File.xml",
-        "lib/net5.0/Serilog.Sinks.File.dll",
-        "lib/net5.0/Serilog.Sinks.File.pdb",
-        "lib/net5.0/Serilog.Sinks.File.xml",
-        "lib/netstandard1.3/Serilog.Sinks.File.dll",
-        "lib/netstandard1.3/Serilog.Sinks.File.pdb",
-        "lib/netstandard1.3/Serilog.Sinks.File.xml",
+        "README.md",
+        "lib/net462/Serilog.Sinks.File.dll",
+        "lib/net462/Serilog.Sinks.File.xml",
+        "lib/net471/Serilog.Sinks.File.dll",
+        "lib/net471/Serilog.Sinks.File.xml",
+        "lib/net6.0/Serilog.Sinks.File.dll",
+        "lib/net6.0/Serilog.Sinks.File.xml",
+        "lib/net8.0/Serilog.Sinks.File.dll",
+        "lib/net8.0/Serilog.Sinks.File.xml",
         "lib/netstandard2.0/Serilog.Sinks.File.dll",
-        "lib/netstandard2.0/Serilog.Sinks.File.pdb",
         "lib/netstandard2.0/Serilog.Sinks.File.xml",
-        "lib/netstandard2.1/Serilog.Sinks.File.dll",
-        "lib/netstandard2.1/Serilog.Sinks.File.pdb",
-        "lib/netstandard2.1/Serilog.Sinks.File.xml",
-        "serilog.sinks.file.5.0.0.nupkg.sha512",
+        "serilog-sink-nuget.png",
+        "serilog.sinks.file.6.0.0.nupkg.sha512",
         "serilog.sinks.file.nuspec"
+      ]
+    },
+    "Serilog.Sinks.Seq/9.0.0": {
+      "sha512": "aNU8A0K322q7+voPNmp1/qNPH+9QK8xvM1p72sMmCG0wGlshFzmtDW9QnVSoSYCj0MgQKcMOlgooovtBhRlNHw==",
+      "type": "package",
+      "path": "serilog.sinks.seq/9.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/net6.0/Serilog.Sinks.Seq.dll",
+        "lib/net6.0/Serilog.Sinks.Seq.xml",
+        "lib/netstandard2.0/Serilog.Sinks.Seq.dll",
+        "lib/netstandard2.0/Serilog.Sinks.Seq.xml",
+        "serilog.sinks.seq.9.0.0.nupkg.sha512",
+        "serilog.sinks.seq.nuspec"
       ]
     },
     "Swashbuckle.AspNetCore/6.4.0": {
@@ -2999,7 +3064,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net8.0": [
+    "net9.0": [
       "Asp.Versioning.Http >= 8.1.0",
       "Asp.Versioning.Mvc >= 8.1.0",
       "Asp.Versioning.Mvc.ApiExplorer >= 8.1.0",
@@ -3009,6 +3074,7 @@
       "FakeApiFarsi.infrastructure >= 1.0.0",
       "MediatR >= 12.4.1",
       "NSwag.Core >= 14.2.0",
+      "Scalar.AspNetCore >= 2.0.15",
       "Serilog.AspNetCore >= 8.0.2",
       "Serilog.Enrichers.ClientInfo >= 2.1.1",
       "Serilog.Enrichers.CorrelationId >= 3.0.1",
@@ -3019,50 +3085,43 @@
       "Serilog.Extensions.Logging >= 8.0.0",
       "Serilog.Formatting.Elasticsearch >= 10.0.0",
       "Serilog.Sinks.Console >= 6.0.0",
+      "Serilog.Sinks.Seq >= 9.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\AsusIran\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Mmrzjavv\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\work\\Self\\FakeApiFarsi\\BackEnd\\FakeApiFarsi_WebService\\Src\\FakeApiFarsi.Api\\FakeApiFarsi.Api.csproj",
+      "projectUniqueName": "C:\\Users\\Mmrzjavv\\Downloads\\FakeApiFarsi\\Fake-Persian-Api-Service\\Src\\FakeApiFarsi.Api\\FakeApiFarsi.Api.csproj",
       "projectName": "FakeApiFarsi.Api",
-      "projectPath": "D:\\work\\Self\\FakeApiFarsi\\BackEnd\\FakeApiFarsi_WebService\\Src\\FakeApiFarsi.Api\\FakeApiFarsi.Api.csproj",
-      "packagesPath": "C:\\Users\\AsusIran\\.nuget\\packages\\",
-      "outputPath": "D:\\work\\Self\\FakeApiFarsi\\BackEnd\\FakeApiFarsi_WebService\\Src\\FakeApiFarsi.Api\\obj\\",
+      "projectPath": "C:\\Users\\Mmrzjavv\\Downloads\\FakeApiFarsi\\Fake-Persian-Api-Service\\Src\\FakeApiFarsi.Api\\FakeApiFarsi.Api.csproj",
+      "packagesPath": "C:\\Users\\Mmrzjavv\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Mmrzjavv\\Downloads\\FakeApiFarsi\\Fake-Persian-Api-Service\\Src\\FakeApiFarsi.Api\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\AsusIran\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Mmrzjavv\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
-        "net8.0"
+        "net9.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "projectReferences": {
-            "D:\\work\\Self\\FakeApiFarsi\\BackEnd\\FakeApiFarsi_WebService\\Src\\FakeApiFarsi.Application\\FakeApiFarsi.Application.csproj": {
-              "projectPath": "D:\\work\\Self\\FakeApiFarsi\\BackEnd\\FakeApiFarsi_WebService\\Src\\FakeApiFarsi.Application\\FakeApiFarsi.Application.csproj"
+            "C:\\Users\\Mmrzjavv\\Downloads\\FakeApiFarsi\\Fake-Persian-Api-Service\\Src\\FakeApiFarsi.Application\\FakeApiFarsi.Application.csproj": {
+              "projectPath": "C:\\Users\\Mmrzjavv\\Downloads\\FakeApiFarsi\\Fake-Persian-Api-Service\\Src\\FakeApiFarsi.Application\\FakeApiFarsi.Application.csproj"
             },
-            "D:\\work\\Self\\FakeApiFarsi\\BackEnd\\FakeApiFarsi_WebService\\Src\\FakeApiFarsi.Domain\\FakeApiFarsi.Domain.csproj": {
-              "projectPath": "D:\\work\\Self\\FakeApiFarsi\\BackEnd\\FakeApiFarsi_WebService\\Src\\FakeApiFarsi.Domain\\FakeApiFarsi.Domain.csproj"
+            "C:\\Users\\Mmrzjavv\\Downloads\\FakeApiFarsi\\Fake-Persian-Api-Service\\Src\\FakeApiFarsi.Domain\\FakeApiFarsi.Domain.csproj": {
+              "projectPath": "C:\\Users\\Mmrzjavv\\Downloads\\FakeApiFarsi\\Fake-Persian-Api-Service\\Src\\FakeApiFarsi.Domain\\FakeApiFarsi.Domain.csproj"
             },
-            "D:\\work\\Self\\FakeApiFarsi\\BackEnd\\FakeApiFarsi_WebService\\Src\\FakeApiFarsi.infrastructure\\FakeApiFarsi.infrastructure.csproj": {
-              "projectPath": "D:\\work\\Self\\FakeApiFarsi\\BackEnd\\FakeApiFarsi_WebService\\Src\\FakeApiFarsi.infrastructure\\FakeApiFarsi.infrastructure.csproj"
+            "C:\\Users\\Mmrzjavv\\Downloads\\FakeApiFarsi\\Fake-Persian-Api-Service\\Src\\FakeApiFarsi.infrastructure\\FakeApiFarsi.infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Mmrzjavv\\Downloads\\FakeApiFarsi\\Fake-Persian-Api-Service\\Src\\FakeApiFarsi.infrastructure\\FakeApiFarsi.infrastructure.csproj"
             }
           }
         }
@@ -3075,12 +3134,13 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "direct"
-      }
+        "auditMode": "all"
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
-      "net8.0": {
-        "targetAlias": "net8.0",
+      "net9.0": {
+        "targetAlias": "net9.0",
         "dependencies": {
           "Asp.Versioning.Http": {
             "target": "Package",
@@ -3105,6 +3165,10 @@
           "NSwag.Core": {
             "target": "Package",
             "version": "[14.2.0, )"
+          },
+          "Scalar.AspNetCore": {
+            "target": "Package",
+            "version": "[2.0.15, )"
           },
           "Serilog.AspNetCore": {
             "target": "Package",
@@ -3146,6 +3210,10 @@
             "target": "Package",
             "version": "[6.0.0, )"
           },
+          "Serilog.Sinks.Seq": {
+            "target": "Package",
+            "version": "[9.0.0, )"
+          },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[6.4.0, )"
@@ -3170,8 +3238,20 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\Mmrzjavv\\.dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.Text.Json' 8.0.4 has a known high severity vulnerability, https://github.com/advisories/GHSA-8g4q-xg66-9fp4",
+      "libraryId": "System.Text.Json",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    }
+  ]
 }

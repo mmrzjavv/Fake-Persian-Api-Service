@@ -2,9 +2,11 @@ using Asp.Versioning.ApiExplorer;
 using Carter;
 using FakeApiFarsi.Api;
 using FakeApiFarsi.Api.Middlewares;
+using Scalar.AspNetCore;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
+
 
 builder.AddPackagesServices();
 builder.AddFakeApiFarsiServices();
@@ -18,15 +20,15 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
-
-app.UseSwagger();
-app.UseSwaggerUI(c => 
+app.UseSwagger(opt =>
 {
-    var provider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
-    foreach (var description in provider.ApiVersionDescriptions)
-    {
-        c.SwaggerEndpoint($"/swagger/{description.GroupName}/swagger.json", description.GroupName.ToUpperInvariant());
-    }
+    opt.RouteTemplate = "openapi/{documentName}.json";
+});
+app.MapScalarApiReference(opt =>
+{
+    opt.Title = "Farsi-Api-Webservice";
+    opt.Theme = ScalarTheme.Mars;
+    opt.DefaultHttpClient = new(ScalarTarget.Http, ScalarClient.Http11);
 });
 
 app.UseMiddleware<ExceptionHandelingMiddleware>();

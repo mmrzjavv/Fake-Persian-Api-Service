@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FakeApiFarsi.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+63b9a0e18e33df8fe192a76998a34f36b1b413cb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a68d147baed061e1b17afb800547259ec532fca2")]
 [assembly: System.Reflection.AssemblyProductAttribute("FakeApiFarsi.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FakeApiFarsi.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

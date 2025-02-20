@@ -1,4 +1,5 @@
-﻿using FakeApiFarsi.Domain;
+﻿using FakeApiFarsi.Application.Queries.DTOs;
+using FakeApiFarsi.Domain;
 using FakeApiFarsi.Domain.User;
 using FakeApiFarsi.infrastructure.OperationRseult;
 using MediatR;
@@ -7,10 +8,9 @@ namespace FakeApiFarsi.Application.Queries.user;
 
 public class UserQueryRequest
 {
-    public class UserQuery : IRequest<OperationResult<User>>
+    public class UserQuery :BaseGetDto, IRequest<OperationResult<User>>
     {
-        public int Skip { get; set; }
-        public int Take { get; set; }
+    
     }
     public class UserQueryHandler(IFakeDataRepository<User> userRepository) : IRequestHandler<UserQuery, OperationResult<User>>
     {

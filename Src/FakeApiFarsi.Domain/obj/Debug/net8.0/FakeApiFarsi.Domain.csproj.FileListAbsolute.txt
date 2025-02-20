@@ -10,3 +10,15 @@ D:\work\Self\FakeApiFarsi\BackEnd\FakeApiFarsi_WebService\Src\FakeApiFarsi.Domai
 D:\work\Self\FakeApiFarsi\BackEnd\FakeApiFarsi_WebService\Src\FakeApiFarsi.Domain\obj\Debug\net8.0\FakeApiFarsi.Domain.pdb
 D:\work\Self\FakeApiFarsi\BackEnd\FakeApiFarsi_WebService\Src\FakeApiFarsi.Domain\obj\Debug\net8.0\ref\FakeApiFarsi.Domain.dll
 D:\work\Self\FakeApiFarsi\BackEnd\FakeApiFarsi_WebService\Src\FakeApiFarsi.Domain\obj\Debug\net8.0\FakeApiFarsi.Domain.sourcelink.json
+C:\Users\Mmrzjavv\Downloads\FakeApiFarsi\Fake-Persian-Api-Service\Src\FakeApiFarsi.Domain\bin\Debug\net8.0\FakeApiFarsi.Domain.deps.json
+C:\Users\Mmrzjavv\Downloads\FakeApiFarsi\Fake-Persian-Api-Service\Src\FakeApiFarsi.Domain\bin\Debug\net8.0\FakeApiFarsi.Domain.dll
+C:\Users\Mmrzjavv\Downloads\FakeApiFarsi\Fake-Persian-Api-Service\Src\FakeApiFarsi.Domain\bin\Debug\net8.0\FakeApiFarsi.Domain.pdb
+C:\Users\Mmrzjavv\Downloads\FakeApiFarsi\Fake-Persian-Api-Service\Src\FakeApiFarsi.Domain\obj\Debug\net8.0\FakeApiFarsi.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mmrzjavv\Downloads\FakeApiFarsi\Fake-Persian-Api-Service\Src\FakeApiFarsi.Domain\obj\Debug\net8.0\FakeApiFarsi.Domain.AssemblyInfoInputs.cache
+C:\Users\Mmrzjavv\Downloads\FakeApiFarsi\Fake-Persian-Api-Service\Src\FakeApiFarsi.Domain\obj\Debug\net8.0\FakeApiFarsi.Domain.AssemblyInfo.cs
+C:\Users\Mmrzjavv\Downloads\FakeApiFarsi\Fake-Persian-Api-Service\Src\FakeApiFarsi.Domain\obj\Debug\net8.0\FakeApiFarsi.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Mmrzjavv\Downloads\FakeApiFarsi\Fake-Persian-Api-Service\Src\FakeApiFarsi.Domain\obj\Debug\net8.0\FakeApiFarsi.Domain.sourcelink.json
+C:\Users\Mmrzjavv\Downloads\FakeApiFarsi\Fake-Persian-Api-Service\Src\FakeApiFarsi.Domain\obj\Debug\net8.0\FakeApiFarsi.Domain.dll
+C:\Users\Mmrzjavv\Downloads\FakeApiFarsi\Fake-Persian-Api-Service\Src\FakeApiFarsi.Domain\obj\Debug\net8.0\refint\FakeApiFarsi.Domain.dll
+C:\Users\Mmrzjavv\Downloads\FakeApiFarsi\Fake-Persian-Api-Service\Src\FakeApiFarsi.Domain\obj\Debug\net8.0\FakeApiFarsi.Domain.pdb
+C:\Users\Mmrzjavv\Downloads\FakeApiFarsi\Fake-Persian-Api-Service\Src\FakeApiFarsi.Domain\obj\Debug\net8.0\ref\FakeApiFarsi.Domain.dll
