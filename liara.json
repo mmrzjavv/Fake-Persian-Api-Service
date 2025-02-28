@@ -9,5 +9,8 @@
       "name": "backend-disk",
       "mountTo": "path/to/folder"
     }
-  ]
+  ],
+  "dotnet": {
+    "version": "8.0"
+  }
 }
