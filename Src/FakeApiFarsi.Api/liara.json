@@ -1,0 +1,13 @@
+{
+  "app": "farsiapi",
+  "port": 3000,
+  "build": {
+    "location": "iran"
+  },
+  "disks": [
+    {
+      "name": "backend-disk",
+      "mountTo": "path/to/folder"
+    }
+  ]
+}
