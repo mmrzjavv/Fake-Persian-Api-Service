@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.11.35303.130
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{9A145165-3C0E-421C-B024-17D92F763ECC}"
+	ProjectSection(SolutionItems) = preProject
+		liara.json = liara.json
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FakeApiFarsi.Api", "Src\FakeApiFarsi.Api\FakeApiFarsi.Api.csproj", "{91D9D29A-7E01-4514-A152-E656EBF0917E}"
 EndProject
